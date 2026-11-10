@@ -41,3 +41,20 @@ example
 # generated native folders
 /ios
 /android
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Local backups
+*.bak*
+*.before-*
+*.pre-*
