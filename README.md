@@ -84,7 +84,9 @@ The game uses a trained Deep Q-Network checkpoint:
 
 The API exposes Q-values for legal alternatives, making the agent's decisions easier to inspect in the game interface.
 
-This repository contains the inference service and trained checkpoint. The model-training pipeline is maintained separately.
+The repository includes the DQN inference service, trained model checkpoint, and original training script.
+
+The training implementation, hyperparameters, dependencies, and reproducibility limitations are documented in the training/ directory.
 
 ## Project Structure
 
@@ -97,6 +99,10 @@ This repository contains the inference service and trained checkpoint. The model
     │   │   └── test_api.py
     │   ├── requirements.txt
     │   └── requirements-dev.txt
+    ├── training/
+    │   ├── train_uno.py
+    │   ├── requirements.txt
+    │   └── README.md
     ├── src/
     │   ├── app/
     │   │   └── index.tsx
@@ -208,7 +214,7 @@ Frontend checks:
 
 ## License and Copyright
 
-Copyright (c) 2026 Lina Favorskaya. All rights reserved.
+Copyright (c) 2026 Polina Favorskaia. All rights reserved.
 
 This repository is publicly available for viewing and evaluation purposes only.
 
