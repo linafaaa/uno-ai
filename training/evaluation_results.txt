@@ -1,0 +1,19 @@
+Games: 100/1000 | Overall: 46.0% | Avg moves: 42.1
+Games: 200/1000 | Overall: 51.0% | Avg moves: 42.8
+Games: 300/1000 | Overall: 51.0% | Avg moves: 42.2
+Games: 400/1000 | Overall: 50.0% | Avg moves: 43.0
+Games: 500/1000 | Overall: 50.6% | Avg moves: 43.4
+Games: 600/1000 | Overall: 51.3% | Avg moves: 42.8
+Games: 700/1000 | Overall: 51.9% | Avg moves: 42.6
+Games: 800/1000 | Overall: 52.4% | Avg moves: 42.7
+Games: 900/1000 | Overall: 52.9% | Avg moves: 42.5
+Games: 1000/1000 | Overall: 52.0% | Avg moves: 42.3
+
+=== SEAT-BALANCED EVALUATION ===
+Total games: 1000
+DQN wins: 520
+Random wins: 480
+Overall win rate: 52.0%
+DQN as player 0: 266/500 (53.2%)
+DQN as player 1: 254/500 (50.8%)
+Average game length: 42.3 moves

@@ -88,6 +88,27 @@ The repository includes the DQN inference service, trained model checkpoint, and
 
 The training implementation, hyperparameters, dependencies, and reproducibility limitations are documented in the training/ directory.
 
+## DQN Evaluation
+
+The trained checkpoint was evaluated against a random-policy opponent over 1,000 games.
+
+| Metric | Result |
+|---|---:|
+| DQN win rate | **52.0% (520/1,000)** |
+| Random opponent win rate | 48.0% |
+| DQN as player 0 | 53.2% (266/500) |
+| DQN as player 1 | 50.8% (254/500) |
+| Average game length | 42.3 moves |
+
+The evaluator alternates the DQN between player positions. The random opponent selects uniformly from legal actions. This is a single run without fixed random seeds; results may vary between runs. Performance against a random opponent does not establish strength against advanced players.
+
+Run the evaluation from the repository root:
+
+    pip install -r training/requirements.txt
+    python training/evaluate_uno.py
+
+See `training/README.md` and `training/evaluation_results.txt` for methodology and recorded output.
+
 ## Project Structure
 
     uno-mobile/
@@ -101,6 +122,8 @@ The training implementation, hyperparameters, dependencies, and reproducibility 
     │   └── requirements-dev.txt
     ├── training/
     │   ├── train_uno.py
+    │   ├── evaluate_uno.py
+    │   ├── evaluation_results.txt
     │   ├── requirements.txt
     │   └── README.md
     ├── src/

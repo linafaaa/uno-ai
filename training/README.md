@@ -68,4 +68,27 @@ The saved checkpoint does not contain the complete training state required to re
 
 The training setup uses a random opponent. Performance against a random agent should not be interpreted as evidence of competitive strength against advanced UNO strategies.
 
-No performance claims are made here. Evaluation results should be reported separately, together with the evaluation methodology and sample size.
+## Evaluation
+
+The saved checkpoint was evaluated against a random-policy opponent for 1,000 games using `evaluate_uno.py`.
+
+The evaluator alternates the DQN between player 0 and player 1 (500 games per position). The random opponent selects uniformly from the legal actions returned by RLCard. The DQN selects the legal action with the highest predicted Q-value.
+
+Recorded result:
+
+| Metric | Result |
+|---|---:|
+| Total games | 1,000 |
+| DQN wins | 520 |
+| Random wins | 480 |
+| Overall DQN win rate | **52.0%** |
+| DQN as player 0 | 266/500 (53.2%) |
+| DQN as player 1 | 254/500 (50.8%) |
+| Average game length | 42.3 moves |
+
+Run from the repository root:
+
+    pip install -r training/requirements.txt
+    python training/evaluate_uno.py
+
+The recorded output is available in `evaluation_results.txt`. The evaluation does not set fixed random seeds, so results may vary between runs. This result measures performance only against the included random policy and should not be interpreted as evidence of competitive strength against advanced UNO strategies.
